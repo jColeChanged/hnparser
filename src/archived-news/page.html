@@ -1,38 +1,86 @@
 <html>
   <head>
-    <style type="text/css">
-.center
-{
-width: 85%;
-margin: 0 auto;
-}
-.nav_bar {
-font-family:Verdana;
-font-size: 10pt;
-background-color:#ff6600;
-}
-a:link    { color:#000000; text-decoration:none; }
-a:visited { color:#828282; text-decoration:none; }
-#home-link { font-family:Verdana; font-size: 10pt; color:#000000; 
-padding-right: 4px;}
-#nav-right {
-float: right;
-margin:4px; }
-    </style>
+    <link href="nyc.css" rel="stylesheet">
   </head>
   <body>
     <div class="center">
-      <div class="nav_bar">
+      <div class="header">
 	<img src="ny.gif"></img>
-	<a id="home-link" href=""><b>Hacker Archives</b></a>
-	<a href="/newest">new</a> | <a href="/jobs">jobs</a> | <a href="/submit">submit</a> | <a href="/search">search</a> <input type="text"></input> <span id="nav-right"><a href="profile">JoshCole</a> (49) | <a href="/logout">logout</a></span>
+	<a id="home-link" href="">Hacker Archives</a>
+	<a href="/newest">new</a> | 
+	<a href="/jobs">jobs</a> | 
+	<a href="/submit">submit</a> | 
+	<a href="/search">search</a> 
+	<input type="text">
+	<span id="account-info">
+	  <a href="profile">JoshCole</a> (49) | 
+	  <a href="/logout">logout</a>
+	</span>
+      </div>
+      <div class="submission">
+	<form class="upvote" action="vote" type="POST">
+	  <input type="hidden" value="id"></input>
+	  <input type="image" src="up.gif"></input>
+	</form>
+	<a class="title" href="link">Top 3 Code Editors For IPad</a><br/>
+	<div class="subtext">x points by 
+	  <a href="user">username</a> x hours ago |
+	  <a href="comments">x comments</a> | 
+	  <a href="flag">flag</a> |
+	  <a href="edit">edit</a>
+	</div>
+	<div class="body">This text is the body, I guess.</div>
+	<div class="tags">
+	  <a href="tagone">tag one</a> 
+	  <a href="tagtwo">tag two</a>
+	</div>
+	<form class="textarea" action="post" type="POST">
+	  <textarea cols="60" rows="6" name="text"></textarea><br/><br />
+	  <input type="submit" value="add comment"></input>
+	</form>
       </div>
       <div class="comments">
+	<div class="comment">
+	  <form class="upvote" action="vote" type="POST">
+	    <input type="hidden" value="id"></input>
+	    <input type="image" src="up.gif"></input>
+	  </form>
+	  <div class="comhead">
+	    4 points by 
+	    <a href="username">username</a> 
+	    so long ago | 
+	    <a href="original comment">link</a>
+	  </div>
+	  <div class="comment_body"><p>The of the most common things I hear from people is to be careful who you tell your idea to when starting a company. The perceived risk is that the other person who you share it with will take your idea, run with it, and you'll get no credit, no compensation, and you'll end up looking like the Winklevoss twins (who Mark Zuckerberg supposedly took the Facebook idea from) ... who I should add clearly weren't capable of executing. This is the meat of the comment.</p>
+	    <p><u><a class="reply" href="reply">reply</a></u></p>
+	  </div>
 	<div class="comment depth_1">
-	  <p>4 points by <a href="username">username</a> so long ago | <a href="original comment">link</a></p>
-	  <p>One of the most common things I hear from people is to be careful who you tell your idea to when starting a company. The perceived risk is that the other person who you share it with will take your idea, run with it, and you'll get no credit, no compensation, and you'll end up looking like the Winklevoss twins (who Mark Zuckerberg supposedly took the Facebook idea from) ... who I should add clearly weren't capable of executing. This is the meat of the comment.</p> 
+	  <form class="upvote" action="vote" type="POST">
+	    <input type="hidden" value="id">
+	    <input type="image" src="up.gif">
+	  </form>
+	  <div class="comhead">
+	    4 points by 
+	    <a href="username">username</a> 
+	    so long ago | 
+	    <a href="original comment">link</a>
+	  </div>
+	  <div class="comment_body"><p>The of the most common things I hear from people is to be careful who you tell your idea to when starting a company. The perceived risk is that the other person who you share it with will take your idea, run with it, and you'll get no credit, no compensation, and you'll end up looking like the Winklevoss twins (who Mark Zuckerberg supposedly took the Facebook idea from) ... who I should add clearly weren't capable of executing. This is the meat of the comment.</p>
+	    <p><u><a class="reply" href="reply">reply</a></u></p>
+	  </div>
+	</div>
+	</div>
+	<div class="footer">
+	  <div class="links">
+	    <a href="lists">Lists</a> | 
+	    <a href="bookmarklet">Bookmarklet</a> |
+	    <a href="guidelines">Guidelines</a> |
+	    <a href="faq">FAQ</a> |
+	    <a href="features">Feature Requests</a> |
+	    <a href="notyc">Not Y Combinator</a> |
+	    <a href="library">Library</a>
+	  </span>
 	</div>
       </div>
-    </div>
   </body>
 </html>

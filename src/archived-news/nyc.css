@@ -1,0 +1,168 @@
+a:link {
+    color:#000000;
+    text-decoration:none;
+}
+
+a:visited {
+    color:#828282;
+    text-decoration:none;
+}
+/* Center
+Most of the pages require content to be centered within a light gray box. */
+.center {
+    width: 85%;
+    margin: 0 auto;
+    background-color: #f6f6ef;
+}
+
+/* Header
+This should be the first class within the center class. */
+.header {
+    font-family:Verdana;
+    font-size: 10pt;
+    background-color:#ff6600;
+}
+
+.header #home-link {
+    font-weight: bold;
+    color:#000000;
+    padding-right: 4px;
+}
+
+.header #account-info {
+    float: right;
+    margin:4px;
+}
+
+/* Footer
+This should be the last class within the center class. */
+.footer {
+    border-top: solid #ff6600 2px;
+    padding-top: 15px;
+}
+
+.footer .links {
+    margin: 0 auto;
+    width: 500px;
+    font-family:Verdana;
+    font-size:  8pt;
+    color:#828282;
+}
+
+
+
+.comhead {
+    font-family:Verdana;
+    font-size:  8pt;
+    color:#828282;
+    margin: 3px;
+}
+.comhead a:link, .subtext a:visited { color:#828282; }
+.comhead a:hover { text-decoration:underline; }
+
+
+
+
+
+
+
+
+.submission {
+    margin-top: 10px;
+}
+
+.title {
+    font-family:Verdana;
+    font-size: 10pt;
+    color:#828282;
+}
+.subtext, .subtext a:link, .subtext a:visited  {
+    font-family:Verdana;
+    font-size:  7pt;
+    color:#828282;
+}
+
+.comment_body { font-family:Verdana; font-size:  9pt; }
+
+form.upvote {
+    float: left;
+    margin-right: 8px;
+}
+.submission form.upvote {
+    margin-top: 3px;
+}
+.comment_body {
+    margin-left: 18px;
+}
+.comment_body p {
+    margin-top: 5px;
+}
+
+.comment_body p u a {
+    font-size: 7pt;
+}
+
+.body {
+    font-family:Verdana;
+    font-size:10pt;
+    color:#828282;
+}
+.body, .tags, form.textarea {
+    margin-left: 18px;
+    margin-top: 10px;
+}
+
+.tags a
+{
+    border: 1px solid #e8edff ;
+    background-color: #e8edff ;
+    padding: 1px;
+    line-height: 24px;
+}
+.tags a:hover
+{
+    color: #334;
+}
+
+
+/* This is just providing setting the margins for nested comments. No need to
+check out anything below this. */
+.depth_1 {
+    margin-left: 50px;
+}
+
+.depth_2 {
+    margin-left: 100px;
+}
+
+.depth_3 {
+    margin-left: 30px;
+}
+
+.depth_4 {
+    margin-left: 150px;
+}
+
+.depth_5 {
+    margin-left: 200px;
+}
+
+.depth_6 {
+    margin-left: 250px;
+}
+
+.depth_7 {
+    margin-left: 300px;
+}
+
+.depth_8 {
+    margin-left: 350px;
+}
+
+.depth_9 {
+    margin-left: 400px;
+}
+
+.depth_10 {
+    margin-left: 450px;
+}
