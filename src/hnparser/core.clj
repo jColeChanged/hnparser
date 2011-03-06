@@ -1,7 +1,6 @@
 (ns hnparser.core
   (:require [net.cgrand.enlive-html :as html]
-	    [clj-time.core :as dtime]
-	    [saxon :as xml])
+	    [clj-time.core :as dtime])
   (:use [hnparser.rate-limit :only [defrlf]]
 	[clojure.contrib.string :only [join]]
 	clj-time.coerce))
@@ -114,6 +113,3 @@
 	  (recur
 	   (rest links)
 	   (cons (get-comment (rl-fetch-url (urlize (first links)))) items)))))))
-  (def test-link "http://news.ycombinator.com/item?id=1988804")
-  (def test-url "http://news.ycombinator.com/item?id=2061408")
-  
