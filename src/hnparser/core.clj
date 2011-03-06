@@ -1,9 +1,11 @@
 (ns hnparser.core
-  (:require [net.cgrand.enlive-html :as html]
-	    [clj-time.core :as dtime])
   (:use [hnparser.rate-limit :only [defrlf]]
 	[clojure.contrib.string :only [join]]
-	clj-time.coerce))
+	clj-time.coerce
+	enlive-utils.core)
+  (:require [net.cgrand.enlive-html :as html]
+	    [clj-time.core :as dtime]))
+ 
 
 ;; Paul Graham told me he didn't want me to be doing more than one request
 ;; per five seconds. This bit of code is defining a url fetcher that adheres
@@ -39,9 +41,6 @@
 		   (= unit-type "day") (dtime/days units)))))))
 
 (defn pparse-date [d] (parse-date (.substring d 1 (- (.length d) 4))))
-
-(def flink (comp :href :attrs first))
-(def fcontentf (comp first :content first))
 
 (defn get-post
   [page]
