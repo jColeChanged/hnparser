@@ -3,7 +3,6 @@
   :dependencies [[org.clojure/clojure "1.2.0"]
                  [org.clojure/clojure-contrib "1.2.0"]
 		 [enlive "1.0.0-SNAPSHOT"]
-		 [enlive-utils "0.0.1"]
 		 [clj-time "0.2.0-SNAPSHOT"]
 		 [congomongo "0.1.3-SNAPSHOT"]]
   :dev-dependencies [[swank-clojure "1.3.0-SNAPSHOT"]]
