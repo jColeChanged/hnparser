@@ -3,6 +3,7 @@
 	    [clj-time.core :as dtime])
   (:use [hnparser.rate-limit :only [defrlf]]
 	[clojure.contrib.string :only [join]]
+	[html-to-markdown.core :only [html-to-markdown]]
 	clj-time.coerce))
 
 ;; Paul Graham told me he didn't want me to be doing more than one request
@@ -51,14 +52,11 @@
 	   (html/select page [:td.title [:a (html/attr? :href)]]))
    :title-link (flink
 		(html/select page [:td.title [:a (html/attr? :href)]]))
-   :body (join
-	  "\n\n"
-	  (map
-	   html/text
-	   (:content (first
-		      (html/select page [:td [:table (html/nth-child 1)]
-					 [:tr (html/nth-child 4)]
-					 [:td (html/nth-child 2)]])))))
+   :body (html-to-markdown
+	  (:content (first
+		     (html/select page [:td [:table (html/nth-child 1)]
+					[:tr (html/nth-child 4)]
+					[:td (html/nth-child 2)]]))))
    :score (Integer/parseInt
 	   ((comp second #(re-matches #"(-?\d+) points?" %) fcontentf)
 	    (html/select page [:td.subtext [:span]])))
@@ -88,12 +86,10 @@
 			      [:span.comhead [:a (html/nth-of-type 2)]]})))
    :parent ((comp second #(re-matches #"item\?id=(\d+)" %) flink)
 	    (html/select page [:span.comhead [:a (html/nth-of-type 3)]]))
-   :body (join
-	  "\n\n"
-	  (map html/text
-	       (concat
-		(html/select page [[:.default (html/nth-child 2)] :.comment])
-		(html/select page [[:.default (html/nth-child 2)] :p]))))})
+   :body (html-to-markdown
+	  (concat
+	   (html/select page [[:.default (html/nth-child 2)] :.comment])
+	   (html/select page [[:.default (html/nth-child 2)] :p])))})
 
 (defn get-all-posts
   [page]
