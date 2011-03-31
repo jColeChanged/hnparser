@@ -5,6 +5,6 @@
 		 [enlive "1.0.0-SNAPSHOT"]
 		 [clj-time "0.2.0-SNAPSHOT"]
 		 [congomongo "0.1.3-SNAPSHOT"]
-		 [html-to-markdown "0.0.2-SNAPSHOT"]]
+		 [html-to-markdown "0.0.3-SNAPSHOT"]]
   :dev-dependencies [[swank-clojure "1.3.0-SNAPSHOT"]]
   :main hnparser.server)
