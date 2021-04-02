@@ -2,7 +2,7 @@
   (:require [net.cgrand.enlive-html :as html]
 	    [clj-time.core :as dtime])
   (:use [hnparser.rate-limit :only [defrlf]]
-	[clojure.contrib.string :only [join]]
+	[clojure.string :only [join]]
 	[html-to-markdown.core :only [html-to-markdown]]
 	clj-time.coerce))
 

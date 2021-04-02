@@ -1,8 +1,7 @@
 (ns hnparser.main
   (:use somnium.congomongo
 	[hnparser.core :only [scrape-item]]
-	[clojure.contrib.duck-streams :only [read-lines]])
-  (:require [clojure.zip :as zip]))
+	[clojure.string :only [read-lines]]))
 
 (mongo! :db "hacker-archives")
 

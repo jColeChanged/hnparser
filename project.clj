@@ -1,10 +1,8 @@
 (defproject hnparser "1.0.0-SNAPSHOT"
   :description "This is a parser for hacker news comment pages."
-  :dependencies [[org.clojure/clojure "1.2.0"]
-                 [org.clojure/clojure-contrib "1.2.0"]
-		 [enlive "1.0.0-SNAPSHOT"]
-		 [clj-time "0.2.0-SNAPSHOT"]
-		 [congomongo "0.1.3-SNAPSHOT"]
-		 [html-to-markdown "0.0.3-SNAPSHOT"]]
-  :dev-dependencies [[swank-clojure "1.3.0-SNAPSHOT"]]
+  :dependencies [[org.clojure/clojure "1.10.3"]
+                 [enlive "1.1.6"]
+                 [clj-time "0.15.2"]
+                 [congomongo "2.2.1"]]
+  :dev-dependencies [[swank-clojure "1.3.0"]]
   :main hnparser.server)
