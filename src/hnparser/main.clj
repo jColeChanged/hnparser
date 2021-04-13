@@ -29,8 +29,7 @@
 (defn upload-item
   [item]
   (when (nil? (fetch-one :items :where {:id (:id item)}))
-    (insert! :items (assoc item :scrape-date (java.util.Date.)))))
-  
+    (insert! :items (assoc item :scrape-date (java.util.Date.)))))  
 
 (defn upload-items
   [items]
